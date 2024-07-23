@@ -15,5 +15,6 @@ class MImages {
   static const String Cart_PNG = 'assets/images/cart.png';
   static const String Coins_PNG = "assets/images/coin2.png";
   static const String Notification_PNG = "assets/images/notificationwithred.png";
+  static const String Search_Png = "assets/images/search.png";
 
 }
