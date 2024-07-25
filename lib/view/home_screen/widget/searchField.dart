@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meesho_clone_app/utils/constants/color_constants.dart';
 
 class SearchTextField extends StatelessWidget {
   @override
@@ -6,8 +7,8 @@ class SearchTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-        prefixIcon: const Icon(Icons.search, color: Colors.grey),
-        suffixIcon: const Icon(Icons.mic, color: Colors.grey),
+        prefixIcon: const Icon(Icons.search, color: MColors.grey),
+        suffixIcon: const Icon(Icons.mic, color: MColors.grey),
         hintText: "Search by Keyword or Product ID",
         hintStyle: const TextStyle(
           color: Colors.grey,
@@ -17,15 +18,15 @@ class SearchTextField extends StatelessWidget {
         fillColor: Colors.white,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey, width: 1),
+          borderSide: BorderSide(color:  MColors.grey, width: 1),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey, width: 1),
+          borderSide: BorderSide(color:  MColors.grey, width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey, width: 1),
+          borderSide: BorderSide(color:  MColors.grey, width: 1),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meesho_clone_app/utils/constants/color_constants.dart';
 import 'package:meesho_clone_app/utils/constants/image_constants.dart';
 
 class AppBarTitle extends StatelessWidget {
@@ -23,7 +24,7 @@ class AppBarTitle extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(131, 173, 22, 138),
+                color: MColors.coinBackground,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -40,7 +41,7 @@ class AppBarTitle extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
-                      color: Colors.white,
+                      color: MColors.secondaryColor,
                     ),
                   ),
                 ],

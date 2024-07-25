@@ -16,5 +16,14 @@ class MImages {
   static const String Coins_PNG = "assets/images/coin2.png";
   static const String Notification_PNG = "assets/images/notificationwithred.png";
   static const String Search_Png = "assets/images/search.png";
+  static const String Location_PNG = 'assets/images/dp.png';
+
+
+
+  //Category List
+  static const String CATEGORIES_PNG = 'asset/images/catorgycolored.png';
+  static const String WOMENCHURITHAR_PNG = 'asset/images/womenchurithar.png';
+  
+
 
 }
