@@ -36,7 +36,7 @@ class _LocationPickerState extends State<LocationPicker> {
     setState(() {
       enteredPincode = pincodeController.text;
     });
-    // Notify the parent widget of the new pincode
+   
     widget.onSelect(
       _getLocationName(selectedLocationIndex ?? 0),
       enteredPincode,

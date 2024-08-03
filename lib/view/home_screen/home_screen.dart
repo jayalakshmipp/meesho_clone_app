@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:meesho_clone_app/dumb_db.dart';
 import 'package:meesho_clone_app/utils/constants/color_constants.dart';
 import 'package:meesho_clone_app/view/home_screen/widget/CategoryGridWidget.dart';
 import 'package:meesho_clone_app/view/home_screen/widget/LocationWidget.dart';
 import 'package:meesho_clone_app/view/home_screen/widget/appbaractions.dart';
 import 'package:meesho_clone_app/view/home_screen/widget/appbartitle.dart';
-import 'package:meesho_clone_app/view/home_screen/widget/searchField.dart';
+import 'package:meesho_clone_app/view/home_screen/widget/recentViewed%20.dart';
 
+import 'package:meesho_clone_app/view/home_screen/widget/searchField.dart';
+import 'package:meesho_clone_app/view/home_screen/widget/BannerWidget.dart';
+ // Import the detail page
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -20,6 +24,7 @@ class HomeScreen extends StatelessWidget {
         onTap: () => FocusScope.of(context).unfocus(),
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -28,7 +33,19 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 16),
               LocationWidget(),
               SizedBox(height: 16),
-              CategoryGridWidget(), // Adding the category grid widget
+              CategoryGridWidget(),
+              Padding(
+                padding: const EdgeInsets.only(top: 2.0),
+                child: BannerWidget(),
+              ),
+              RecentViewed(
+                recentViewData: DumpDB.RecentView,
+                title: "Recently Viewed",
+              ),
+              RecentViewed(
+                recentViewData: DumpDB.BestSelling,
+                title: "Best Selling",
+              ),
             ],
           ),
         ),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meesho_clone_app/utils/constants/color_constants.dart';
-import 'package:meesho_clone_app/utils/constants/image_constants.dart';
 import 'package:meesho_clone_app/dumb_db.dart';
 import 'package:meesho_clone_app/view/home_screen/widget/CategoryDetailPage.dart';
 import 'package:meesho_clone_app/view/home_screen/widget/CategoryItemWidget.dart';
@@ -14,53 +12,50 @@ class CategoryGridWidget extends StatelessWidget {
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
       padding: EdgeInsets.all(8.0),
-      height: 360, // Adjust the height to fit two rows
-      child: ListView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        children: [
-          Column(
-            children: [
-              Row(
-                children: [
-                  for (int i = 0; i < halfLength; i++)
-                    CategoryItemWidget(
-                      imagePath: categories[i]['imagePath']!,
-                      categoryName: categories[i]['categoryName']!,
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CategoryDetailPage(
-                              categoryName: categories[i]['categoryName']!,
-                            ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                for (int i = 0; i < halfLength; i++)
+                  CategoryItemWidget(
+                    imagePath: categories[i]['imagePath']!,
+                    categoryName: categories[i]['categoryName']!,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoryDetailPage(
+                            categoryName: categories[i]['categoryName']!,
                           ),
-                        );
-                      },
-                    ),
-                ],
-              ),
-              Row(
-                children: [
-                  for (int i = halfLength; i < categories.length; i++)
-                    CategoryItemWidget(
-                      imagePath: categories[i]['imagePath']!,
-                      categoryName: categories[i]['categoryName']!,
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CategoryDetailPage(
-                              categoryName: categories[i]['categoryName']!,
-                            ),
+                        ),
+                      );
+                    },
+                  ),
+              ],
+            ),
+            Row(
+              children: [
+                for (int i = halfLength; i < categories.length; i++)
+                  CategoryItemWidget(
+                    imagePath: categories[i]['imagePath']!,
+                    categoryName: categories[i]['categoryName']!,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoryDetailPage(
+                            categoryName: categories[i]['categoryName']!,
                           ),
-                        );
-                      },
-                    ),
-                ],
-              ),
-            ],
-          ),
-        ],
+                        ),
+                      );
+                    },
+                  ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -21,9 +21,19 @@ class MImages {
 
 
   //Category List
-  static const String CATEGORIES_PNG = 'asset/images/catorgycolored.png';
+  static const String CATEGORIES_PNG = 'assets/images/catorgycolored.png';
   static const String WOMENCHURITHAR_PNG = 'asset/images/womenchurithar.png';
+
+   static const String KIDS_PNG = "assets/images/kids.png";
+ static const String TOY_PNG = "assets/images/toys.png";
+ static const String JEWELLERY_PNG = "assets/images/jewellery.png";
+ static const String BAGS_PNG = "assets/images/bags.png";
+static const String KITCHEN_PNG = "assets/images/kitchen.png";
   
-
-
+static const String SAREE_PNG = "assets/images/saree.png";
+ static const String KURTHI_PNG = "assets/images/kurthi.png";
+  static const String DECOR_PNG = "assets/images/home decor.png";
+ static const String FOOTWEAR_PNG  = "assets/images/footwear.png";
+ static const String BEAUTY_PNG = "assets/images/beauty.png";
+  static const String PURSE_PNG = "assets/images/purse.png";
 }

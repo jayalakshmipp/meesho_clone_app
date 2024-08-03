@@ -25,24 +25,23 @@ class _SplashScreenState extends State<SplashScreen>
       duration: const Duration(seconds: 3),
     );
 
-    // Define the scale animation
+ 
     _scaleAnimation = Tween<double>(
       begin: 0.0,
       end: 1.0,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.elasticOut));
 
-    // Define the fade animation
+  
     _fadeAnimation = Tween<double>(
       begin: 0.0,
       end: 1.0,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
 
-    // Start the animation after 1 second
     Timer(const Duration(seconds: 1), () {
       _controller.forward();
     });
 
-    // Navigate to the next screen after 4 seconds
+
     Timer(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => HomeScreen()));
@@ -66,19 +65,19 @@ class _SplashScreenState extends State<SplashScreen>
             // Logo stays stationary
             Image.asset(
               MImages.MLogo_PNG,
-              width: 100, // Standard size for the logo
+              width: 100, 
               height: 100,
             ),
-            // Title with scale and fade-in animation
+            
             ScaleTransition(
               scale: _scaleAnimation,
               child: FadeTransition(
                 opacity: _fadeAnimation,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 50), // Reduced distance from the logo
+                  padding: EdgeInsets.only(top: 50), 
                   child: Image.asset(
                     MImages.Meesho_White_Logo_PNG,
-                    width: 80, // Smaller size for the title image
+                    width: 80,
                     height: 80,
                   ),
                 ),
