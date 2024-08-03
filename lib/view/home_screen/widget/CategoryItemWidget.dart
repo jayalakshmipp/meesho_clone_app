@@ -17,7 +17,7 @@ class CategoryItemWidget extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 55,
-        margin: EdgeInsets.all(4.0),
+        margin: EdgeInsets.all(4),
         child: Column(
           children: [
             Container(
@@ -26,8 +26,8 @@ class CategoryItemWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color(0xFFB9E3FF), 
                 borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(40.0), 
-                  bottom: Radius.circular(16.0), 
+                  top: Radius.circular(40), 
+                  bottom: Radius.circular(16), 
                 ),
               ),
               child: Center(
@@ -42,11 +42,11 @@ class CategoryItemWidget extends StatelessWidget {
             ),
             Container(
               color: Colors.white,
-              padding: const EdgeInsets.all(4.0),
+              padding: const EdgeInsets.all(4),
               child: Text(
                 categoryName,
                 style: TextStyle(
-                  fontSize: 10.0, // Adjust font size as needed
+                  fontSize: 10, // Adjust font size as needed
                   fontWeight: FontWeight.bold,
                 ),
               ),

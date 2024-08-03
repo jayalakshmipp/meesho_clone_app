@@ -46,7 +46,7 @@ class _LocationWidgetState extends State<LocationWidget> {
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-        color: MColors.locationBackground,
+        color: Color.fromARGB(184, 238, 236, 236),
         child: Row(
           children: [
             Image.asset(

@@ -58,11 +58,11 @@ class _BannerWidgetState extends State<BannerWidget> {
           children: List.generate(DumpDB.BannerList.length, (index) {
             return Container(
               margin: EdgeInsets.symmetric(horizontal: 2.0),
-              width: _currentPage == index ? 10.0 : 8.0,
-              height: 6.0,
+              width: _currentPage == index ? 10 : 8,
+              height: 6,
               decoration: BoxDecoration(
                 color: _currentPage == index ? MColors.secondaryColor : Color(0xFFE4E3E3),
-                borderRadius: BorderRadius.circular(3.0), 
+                borderRadius: BorderRadius.circular(3), 
               ),
             );
           }),
@@ -70,8 +70,8 @@ class _BannerWidgetState extends State<BannerWidget> {
         SizedBox(height: 15), 
         Divider(
           color: Color(0xFFE4E3E3), 
-          height: 1.0, 
-          thickness: 4.0, 
+          height: 1, 
+          thickness: 4, 
         ),
       ],
     );

@@ -36,4 +36,10 @@ static const String SAREE_PNG = "assets/images/saree.png";
  static const String FOOTWEAR_PNG  = "assets/images/footwear.png";
  static const String BEAUTY_PNG = "assets/images/beauty.png";
   static const String PURSE_PNG = "assets/images/purse.png";
+
+
+ static const String HomeIcon  = "assets/icons/home_page.png";
+ static const String SearchIconBlue ="assets/icons/searchBlue.png";
+
+
 }

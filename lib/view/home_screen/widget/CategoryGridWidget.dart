@@ -11,7 +11,7 @@ class CategoryGridWidget extends StatelessWidget {
 
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Column(

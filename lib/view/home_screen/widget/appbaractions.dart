@@ -14,15 +14,7 @@ class AppBarActions extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        SizedBox(width: 10),
-        IconButton(
-          icon: Image.asset(
-            MImages.WishList_PNG,
-            width: 18,
-            height: 18,
-          ),
-          onPressed: () {},
-        ),
+        
         SizedBox(width: 10),
         IconButton(
           icon: Image.asset(

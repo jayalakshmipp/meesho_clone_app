@@ -5,25 +5,25 @@ class DumpDB {
   static List<Map<String, String>> getLocations() {
     return [
       {
-        'name': 'Jayalakshmi',
-        'address': '123 Main St,',
-        'street': 'Main St',
-        'pincode': '123456',
-        'place': 'City Center'
+        'name': 'Jaya',
+        'address': 'khdf',
+        'street': 'ajsmndt',
+        'pincode': '123',
+        'place': 'ab'
       },
       {
         'name': 'Sreekutty',
-        'address': '456 Maple Ave, Town',
-        'street': 'Maple Ave',
-        'pincode': '654321',
-        'place': 'Uptown'
+        'address': 'kjfacb',
+        'street': 'hksdjk',
+        'pincode': '654',
+        'place': 'cs'
       },
       {
         'name': 'Sreelakshmi',
-        'address': '789 Oak Dr, Village',
-        'street': 'Oak Dr',
-        'pincode': '789123',
-        'place': 'Downtown'
+        'address': 'mdsn',
+        'street': 'ughn',
+        'pincode': '7891',
+        'place': 'mn'
       },
     ];
   }
@@ -180,7 +180,7 @@ class DumpDB {
           'price': '250',
           'rating': '4.0',
         },
-        // Add more products
+        
       ],
       'Beauty': [
         {
@@ -197,7 +197,7 @@ class DumpDB {
           'price': '300',
           'rating': '4.2',
         },
-        // Add more products
+       
       ],
       'Night wear': [
         {
@@ -214,11 +214,46 @@ class DumpDB {
           'price': '300',
           'rating': '4.2',
         },
-        // Add more products
+       
       ],
-      // Add more categories and products
+     
     };
 
     return productsByCategory[categoryName] ?? [];
   }
+
+static List<Map<String, String>> getProductsEachCategory(String categoryName) {
+    final productsByEachCategory = {
+      'Category': [
+        {"imagePath": MImages.CATEGORIES_PNG, "productname": "Category"},
+    {"imagePath": MImages.JEWELLERY_PNG, "productname": "Jewelery"},
+    {"imagePath": MImages.KURTHI_PNG, "productname": "Kurthi"},
+    {"imagePath": MImages.TOY_PNG, "productname": "Toys"},
+    {"imagePath": MImages.BAGS_PNG, "productname": "Bags"},
+    {"imagePath": MImages.DECOR_PNG, "productname": "Decor"},
+    {"imagePath": MImages.Coins_PNG, "productname": "Rakhi"},
+    {"imagePath": MImages.KIDS_PNG, "productname": "Kids"},
+    {"imagePath": MImages.SAREE_PNG, "productname": "Sarees"},
+    {"imagePath": MImages.BEAUTY_PNG, "productname": "Beauty"},
+    {"imagePath": MImages.KITCHEN_PNG, "productname": "kitchen"},
+    {"imagePath": MImages.FOOTWEAR_PNG, "productname": "FootWear"},
+    {"imagePath": MImages.PURSE_PNG, "productname": "Purses"},
+    {"imagePath": MImages.Coins_PNG, "productname": "Books"},
+        // Add more products for "All" category
+      ],
+      'Jewelery': [
+        {'imagePath': 'https://images.meesho.com/images/products/306265365/plynl_400.web','productname':"categoryname"},
+        {'imagePath': 'https://images.meesho.com/images/products/306265365/plynl_400.webp','productname':"categoryname"},
+        // Add more products for "Jewelry" category
+      ],
+      'Kurthi': [
+        {'imagePath': 'https://images.meesho.com/images/products/387635906/jfmt2_400.webp','productname':"kurthi1"},
+        {'imagePath': 'https://images.meesho.com/images/products/428332855/gheuj_400.webp','productname':"kurthi2"},
+        // Add more products for "Kurthi" category
+      ],
+      // Add other categories similarly
+    };
+    return productsByEachCategory[categoryName] ?? [];
 }
+}
+  

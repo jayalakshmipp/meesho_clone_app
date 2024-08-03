@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meesho_clone_app/utils/constants/color_constants.dart';
 import 'package:meesho_clone_app/utils/constants/image_constants.dart';
+import 'package:meesho_clone_app/view/bottom_nav_screen/bottom_nav_screen.dart';
 import 'dart:async';
 import 'package:meesho_clone_app/view/home_screen/home_screen.dart';
 
@@ -44,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     Timer(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen()));
+          MaterialPageRoute(builder: (context) => BottomNavScreen()));
     });
   }
 

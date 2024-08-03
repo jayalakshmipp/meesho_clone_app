@@ -17,12 +17,12 @@ class SingleProductDetailsPage extends StatelessWidget {
           children: [
             Center(
               child: Container(
-                height: 300.0,
+                height: 300,
                 child: PageView.builder(
                   itemCount: 5, 
                   itemBuilder: (context, index) {
                     return Container(
-                      margin: EdgeInsets.all(4.0),
+                      margin: EdgeInsets.all(4),
                       child: Image.network(
                         product['imagePath'] ?? '',
                         fit: BoxFit.cover,
@@ -33,22 +33,22 @@ class SingleProductDetailsPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     product['productName'] ?? '',
                     style: TextStyle(
-                      fontSize: 24.0,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 8.0),
+                  SizedBox(height: 8),
                   Text(
                     product['price'] ?? '',
                     style: TextStyle(
-                      fontSize: 24.0,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -56,10 +56,10 @@ class SingleProductDetailsPage extends StatelessWidget {
                     'Free Delivery',
                     style: TextStyle(
                       color: Colors.green,
-                      fontSize: 16.0,
+                      fontSize: 16,
                     ),
                   ),
-                  SizedBox(height: 8.0),
+                  SizedBox(height: 8),
                   Row(
                     children: [
                       Container(
@@ -73,15 +73,15 @@ class SingleProductDetailsPage extends StatelessWidget {
                             Text(
                               product['rating'] ?? '0',
                               style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),
-                            SizedBox(width: 4.0),
+                            SizedBox(width: 4),
                             Icon(
                               Icons.star,
-                              size: 14.0,
+                              size: 14,
                               color: Colors.white,
                             ),
                           ],
@@ -89,27 +89,27 @@ class SingleProductDetailsPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 16.0),
+                  SizedBox(height: 16),
                   Text(
                     'Select Size:',
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 8.0),
+                  SizedBox(height: 8),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: ['XS', 'S', 'M'].map((size) {
                         return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 4.0),
+                          margin: EdgeInsets.symmetric(horizontal: 4),
                           child: ElevatedButton(
                             onPressed: () {},
                             child: Text(size),
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0),
+                                borderRadius: BorderRadius.circular(8),
                               ),
                             ),
                           ),

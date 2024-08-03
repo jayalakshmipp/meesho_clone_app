@@ -20,12 +20,12 @@ class ProductDetailsPage extends StatelessWidget {
         child: GridView.builder(
           shrinkWrap: true, // Allow GridView to take only necessary space
           physics: NeverScrollableScrollPhysics(), // Disable GridView's scrolling
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 0.65,
-            crossAxisSpacing: 8.0,
-            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
           ),
           itemCount: products.length,
           itemBuilder: (context, index) {
@@ -42,7 +42,7 @@ class ProductDetailsPage extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 250.0, // Adjusted height for better fit
+                height: 250, // Adjusted height for better fit
                 child: Card(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +50,7 @@ class ProductDetailsPage extends StatelessWidget {
                       Stack(
                         children: [
                           Container(
-                            height: 180.0, 
+                            height: 180, 
                             width: double.infinity, 
                             child: Image.network(
                               product['imagePath'] ?? '',
@@ -58,14 +58,14 @@ class ProductDetailsPage extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            top: 8.0,
-                            right: 8.0,
+                            top: 8,
+                            right: 8,
                             child: LoveIcon(),
                           ),
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -77,44 +77,44 @@ class ProductDetailsPage extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                               maxLines: 1,
                             ),
-                            SizedBox(height: 4.0),
+                            SizedBox(height: 4),
                             Text(
                               product['price'] ?? '',
                               style: TextStyle(
-                                fontSize: 16.0,
+                                fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: 4.0),
+                            SizedBox(height: 4),
                             Text(
                               'Free Delivery',
                               style: TextStyle(
                                 color: Colors.green,
                               ),
                             ),
-                            SizedBox(height: 8.0),
+                            SizedBox(height: 8),
                             Row(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
                                     color: Colors.green,
-                                    borderRadius: BorderRadius.circular(8.0),
+                                    borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Row(
                                     children: [
                                       Text(
                                         product['rating'] ?? '0',
                                         style: TextStyle(
-                                          fontSize: 14.0,
+                                          fontSize: 14,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                         ),
                                       ),
-                                      SizedBox(width: 4.0),
+                                      SizedBox(width: 4),
                                       Icon(
                                         Icons.star,
-                                        size: 14.0,
+                                        size: 14,
                                         color: Colors.white,
                                       ),
                                     ],
